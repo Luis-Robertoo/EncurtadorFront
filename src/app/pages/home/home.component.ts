@@ -26,18 +26,17 @@ export class HomeComponent {
       return;
     }
 
-    //this.spinner.show();
+    this.spinner.show();
 
     this.apiService.encurtarLink(this.urlOriginal)
       .subscribe((res: Data<Link>) => {
         this.urlOriginal = '';
         this.retorno = res.data;
-        //this.spinner.hide();
-        console.log(this.retorno)
+        this.spinner.hide();
 
       }, (erro) => {
 
-        //this.spinner.hide();
+        this.spinner.hide();
         this.toastr.error(erro.error.message, 'Erro!')
 
       })
