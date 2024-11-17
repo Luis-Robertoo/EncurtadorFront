@@ -1,0 +1,12 @@
+footer {
+  position: relative;
+  margin-top: auto;
+  bottom: 0;
+}
+
+a {
+  color: #000000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
